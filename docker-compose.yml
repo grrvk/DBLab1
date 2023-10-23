@@ -6,7 +6,7 @@ services:
     container_name: lab-db
     restart: always
     ports:
-      - '5432:5432'
+      - '5555:5432'
     env_file:
       - .env
     environment:

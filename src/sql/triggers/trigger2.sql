@@ -12,3 +12,4 @@ $before_insert_ticket$ LANGUAGE plpgsql;
 CREATE TRIGGER before_insert_ticket
     BEFORE INSERT OR UPDATE ON ticket
     FOR EACH ROW EXECUTE PROCEDURE before_insert_ticket()
+

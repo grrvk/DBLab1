@@ -10,6 +10,8 @@ CREATE TABLE gallery (
 	gallery_description VARCHAR ( 250 ),
 	gallery_address VARCHAR ( 60 ),
 	gallery_phone VARCHAR ( 12 ),
+	gallery_open_hours_Start TIME DEFAULT '10:00',
+	gallery_open_hours_End TIME DEFAULT '21:00',
 	gallery_is_open BOOLEAN DEFAULT TRUE,
 	FOREIGN KEY (gallery_type_id)
       REFERENCES gallery_type (gallery_type_id),

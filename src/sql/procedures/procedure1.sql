@@ -12,3 +12,5 @@ AS $$
         VALUES (a_name,a_surname, a_information);
     END;
 $$;
+
+

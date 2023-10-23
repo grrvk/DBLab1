@@ -12,3 +12,4 @@ $before_insert_review$ LANGUAGE plpgsql;
 CREATE TRIGGER before_insert_review
     BEFORE INSERT OR UPDATE ON review
     FOR EACH ROW EXECUTE PROCEDURE before_insert_review()
+

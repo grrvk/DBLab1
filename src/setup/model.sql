@@ -95,6 +95,20 @@ CREATE TABLE exhibition (
 	updated_at TIMESTAMP
 );
 
+CREATE TABLE exhibition_log (
+	exhibition_id serial PRIMARY KEY,
+	gallery_id INT NOT NULL,
+	exhibition_type_id INT NOT NULL,
+	exhibition_title VARCHAR ( 50 ) UNIQUE NOT NULL,
+	exhibition_description VARCHAR ( 250 ) NOT NULL,
+	FOREIGN KEY (gallery_id)
+      REFERENCES gallery (gallery_id) ON DELETE CASCADE,
+    FOREIGN KEY (exhibition_type_id)
+      REFERENCES exhibition_type (exhibition_type_id),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP
+);
+
 CREATE TABLE ticket (
     ticket_id serial PRIMARY KEY,
     exhibition_id INT NOT NULL,
@@ -104,6 +118,18 @@ CREATE TABLE ticket (
       REFERENCES exhibition (exhibition_id),
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP
+);
+
+CREATE TABLE buyer (
+    buyer_id serial PRIMARY KEY,
+    ticket_id INT NOT NULL,
+    buyer_name VARCHAR ( 50 ) NOT NULL,
+    buyer_surname VARCHAR ( 70 ) NOT NULL,
+    buyer_phone VARCHAR ( 12 ) NOT NULL,
+    buyer_email VARCHAR ( 50 ) NOT NULL,
+    FOREIGN KEY (ticket_id)
+      REFERENCES ticket (ticket_id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE object (

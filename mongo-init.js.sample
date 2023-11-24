@@ -1,0 +1,12 @@
+db.createUser(
+        {
+            user: "mongo_user",
+            pwd: "mongo_user",
+            roles: [
+                {
+                    role: "readWrite",
+                    db: "mongo"
+                }
+            ]
+        }
+);

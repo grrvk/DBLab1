@@ -11,3 +11,4 @@ BEGIN
         RETURN rating;
 END;
 $$;
+

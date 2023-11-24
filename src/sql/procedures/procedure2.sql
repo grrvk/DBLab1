@@ -13,3 +13,4 @@ AS $$
         VALUES (r_exhibition_id, r_reviewer_name, r_review_mark, r_information);
     END;
 $$;
+

@@ -12,3 +12,4 @@ BEGIN
                 AND  (request_time between gallery_open_hours_start and gallery_open_hours_end));
 END;
 $$;
+

@@ -29,3 +29,4 @@ VALUES (1, 1, 2, 'Sculpture of cat', 'Very cool too');
 --ticket mock
 INSERT INTO ticket (exhibition_id, ticket_cost, ticket_is_checked)
 VALUES (1, 12, False);
+

@@ -1,1 +1,2 @@
-CALL create_review(1, 'Reviewer mock', 5, 'Cool')
+CALL create_review(1, 'Reviewer procedure check', 3, 'OK')
+
